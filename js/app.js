@@ -74,7 +74,7 @@ const translations = {
     lastname: "Apellido",
     regBtn: "Registrar",
     yesAccount: "¿Ya tienes cuenta? <a href='#' id='to-login'>Inicia sesión</a>",
-    homeWelcome: "Bienvenido a TraduVoz",
+    homeWelcome: "Bienvenido a Creole",
     homeSubtitle: "Rompe la barrera del idioma entre español y créole haitiano.",
     startBtn: "Comenzar",
     textTranslation: "Traducción de Texto",
