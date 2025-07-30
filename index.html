@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>TraduVoz</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- LOGIN -->
+  <section id="view-login" class="container">
+    <header class="header-bar">
+      <img src="assets/logo.png" class="logo-bar" alt="Logo">
+    </header>
+    <main>
+      <h2 id="login-title">Iniciar Sesión</h2>
+      <p id="lang-question">¿Cuál es tu idioma?</p>
+      <div style="display:flex; gap:8px; margin-bottom:16px;">
+        <button id="lang-es" class="primary">Español</button>
+        <button id="lang-ht" class="primary">Kreyòl</button>
+      </div>
+      <form id="login-form">
+        <label id="login-user-label" for="login-username">Usuario</label>
+        <input id="login-username" type="text" required>
+        <label id="login-pass-label" for="login-password">Contraseña</label>
+        <input id="login-password" type="password" required>
+        <button class="primary" id="login-btn">Entrar</button>
+      </form>
+      <p style="text-align:center;" id="no-account">
+        ¿No tienes cuenta? <a href="#" id="to-register">Regístrate</a>
+      </p>
+    </main>
+  </section>
+
+  <!-- REGISTER -->
+  <section id="view-register" class="container">
+    <header class="header-bar">
+      <img src="assets/logo.png" class="logo-bar" alt="Logo">
+    </header>
+    <main>
+      <h2 id="register-title">Crear Cuenta</h2>
+      <form id="register-form">
+        <label id="reg-name-label" for="reg-firstname">Nombre</label>
+        <input id="reg-firstname" type="text" required>
+        <label id="reg-lastname-label" for="reg-lastname">Apellido</label>
+        <input id="reg-lastname" type="text" required>
+        <label id="reg-user-label" for="reg-username">Usuario</label>
+        <input id="reg-username" type="text" required>
+        <label id="reg-pass-label" for="reg-password">Contraseña</label>
+        <input id="reg-password" type="password" required>
+        <button class="primary" id="reg-btn">Registrar</button>
+      </form>
+      <p style="text-align:center;" id="yes-account">
+        ¿Ya tienes cuenta? <a href="#" id="to-login">Inicia sesión</a>
+      </p>
+    </main>
+  </section>
+
+  <!-- HOME -->
+  <section id="view-home" class="container">
+    <div class="top-bar">
+      <div class="profile-info">
+        <img src="assets/profile.png" id="profile-pic" alt="Perfil">
+        <p id="profile-name">Usuario</p>
+      </div>
+    </div>
+    <main class="home-main">
+      <h2>Bienvenido a TraduVoz</h2>
+      <p>Rompe la barrera del idioma entre español y créole haitiano.</p>
+      <button id="start-translate" class="primary">Comenzar</button>
+    </main>
+    <footer class="home-footer">
+      <img src="assets/logo.png" class="logo-big" alt="Logo">
+    </footer>
+  </section>
+
+  <!-- TRADUCTOR -->
+  <section id="view-translate" class="container">
+    <header class="header-bar">
+      <img src="assets/logo.png" class="logo-bar" alt="Logo">
+    </header>
+    <div class="top-bar">
+      <div class="profile-info">
+        <img src="assets/profile.png" id="profile-pic-translate" alt="Perfil">
+        <p id="profile-name-translate">Usuario</p>
+      </div>
+    </div>
+    <main>
+      <!-- TEXTO -->
+      <section>
+        <h3 id="text-translation-title">Traducción de Texto</h3>
+        <textarea id="text-in" placeholder="Español"></textarea>
+        <button id="btn-text" class="primary">Traducir</button>
+        <textarea id="text-out" placeholder="Créole haitiano" readonly></textarea>
+      </section>
+      <!-- VOZ -->
+      <section>
+        <h3 id="voice-translation-title">Traducción de Voz</h3>
+        <button id="btn-voice" class="primary">Grabar y Traducir</button>
+        <textarea id="voice-out" placeholder="Resultado de la traducción" readonly></textarea>
+      </section>
+      <p style="text-align:center; margin-top:16px;">
+        <a href="#" id="backHome">← Volver al Inicio</a>
+      </p>
+    </main>
+  </section>
+
+  <!-- NAVEGACIÓN -->
+  <nav class="bottom-nav">
+    <a href="#" id="nav-login">🔑</a>
+    <a href="#" id="nav-register">📝</a>
+    <a href="#" id="nav-home">🏠</a>
+    <a href="#" id="nav-translate">💬</a>
+  </nav>
+
+  <!-- Botón flotante cambio de idioma -->
+  <button id="lang-switch" class="lang-btn">
+    🌐 ES
+  </button>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+:root {
+  --bg:        #FAF3E7;  
+  --white:     #FFFFFF;
+  --header-bg: #8B3A62;  
+  --green:     #4CAF50;  
+  --blue:      #4D7C8A;  
+  --red:       #E35D5B;  
+  --blue-dark: #6B4E71;  
+  --gray-light:#E9DED1;  
+  --text:      #3E2C24;  
+  --text-sec:  #5B4C44;  
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+.container { max-width: 400px; margin: 0 auto; padding: 0; }
+
+/* Barra superior con logo estilo imagen */
+.header-bar {
+  background: var(--header-bg);
+  padding: 12px;
+  text-align: center;
+}
+.logo-bar {
+  max-width: 100px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Logo grande solo en home */
+.logo-big {
+  width: 150px;
+  height: auto;
+}
+
+/* Perfil */
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px;
+}
+.profile-info { text-align: right; }
+.profile-info img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.profile-info p { font-size: 0.85rem; color: var(--text); }
+
+/* Home centrado */
+.home-main {
+  text-align: center;
+  margin-top: 60px;
+}
+.home-main h2 { font-size: 1.4rem; margin-bottom: 8px; }
+.home-main p { font-size: 0.95rem; margin-bottom: 16px; }
+.home-footer {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Botón flotante */
+.lang-btn {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  background: var(--blue);
+  color: white;
+  border-radius: 25px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Botones */
+button {
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  margin: 4px 0;
+}
+button.primary { width: 100%; padding: 10px; background: var(--green); color: var(--white); }
+button.primary:hover { background: var(--red); }
+button.primary:active { transform: scale(0.95); }
+
+/* Formularios */
+form label { display: block; margin-bottom: 4px; font-weight: 600; color: var(--text-sec); font-size:0.9rem; }
+form input, textarea {
+  width: 100%; padding: 10px; margin-bottom: 14px; border: 1px solid var(--gray-light);
+  border-radius: 8px; font-size: 0.95rem; background: var(--white);
+}
+
+/* Navegación inferior */
+nav.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 400px;
+  background: var(--gray-light);
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+  border-top: 1px solid var(--white);
+}
+nav.bottom-nav a { text-decoration: none; font-size: 1.5rem; color: var(--text-sec); }
+
+body > section { display: none; }
